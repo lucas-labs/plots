@@ -36,7 +36,7 @@
 
         // 📝 readmes
         "**/**/README.md": true,
-        "**/**/CONTRIBUTING.md": true,
+        // "**/**/CONTRIBUTING.md": true,
 
         // 🗑️
         "**/**/node_modules": true,
