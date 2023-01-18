@@ -8,11 +8,15 @@
 </strong>
 </p>
 
-<br/></br>
+<br/>
 
-# 📖 Documentation
+# 📚 Doc Blocks
 
-## 📚 Doc Blocks
+- [📚 Doc Blocks](#-doc-blocks)
+    - [ColorPalette](#colorpalette)
+    - [EffectsPalette](#effectspalette)
+    - [SpacingSet](#spacingset)
+    - [TypeSet](#typeset)
 
 ### ColorPalette
 
