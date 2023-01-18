@@ -1,0 +1,68 @@
+import { Meta, ArgsTable, Source } from "@storybook/addon-docs/blocks";
+import { EffectsPalette } from "@lucas-labs/plots/blocks";
+
+<Meta title="Plots/EffectsPalette" />
+
+export const effects = [
+    {
+        name: 'shadows',
+        effects: [
+            {
+                label: 'noticeable',
+                description: 'diffuse and more noticeable shadow for big elements',
+                style: {
+                    boxShadow: '0px 24px 24px rgba(50, 11, 79, 0.16)',
+                }
+            },
+            {
+                label: 'emphasis',
+                description: 'thought to be used with accent colors or average colors of images and illustrations',
+                style: {
+                    boxShadow: '0px 16px 24px rgba(255, 101, 148, 0.3)',
+                }
+            },
+            {
+                label: 'medium',
+                description: 'subtle and diffuse shadow for flat elements',
+                style: {
+                    boxShadow: '0px 8px 24px rgba(50, 11, 79, 0.1)',
+                }
+            },
+            {
+                label: 'subtle',
+                description: 'subtle and diffuse shadow for flat elements',
+                style: {
+                    boxShadow: '0px 15px 30px rgba(50, 11, 79, 0.06)',
+                }
+            }
+        ]
+    }
+];
+
+<EffectsPalette effects={effects} />
+
+------
+
+### Usage
+
+```tsx
+import { EffectsPalette } from "@lucas-labs/plots/blocks";
+
+export const effects = [
+    {
+        name: 'shadows',
+        effects: [
+            {
+                label: 'noticeable',
+                description: 'diffuse and more noticeable shadow for big elements',
+                style: {
+                    boxShadow: '0px 24px 24px rgba(50, 11, 79, 0.16)',
+                }
+            },
+            ...
+        ]
+    }
+];
+
+<EffectsPalette effects={effects} />
+```

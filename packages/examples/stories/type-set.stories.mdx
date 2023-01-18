@@ -1,0 +1,210 @@
+import { Meta, ArgsTable, Source } from "@storybook/addon-docs/blocks";
+import { TypeSet } from "@lucas-labs/plots/blocks";
+
+<Meta title="Plots/TypeSet" />
+
+export const typographies = [
+    {
+        name: 'headings / display',
+        fontFamily: 'Outfit',
+        size: '5rem',
+        weight: '600',
+        lineHeight: '5.5rem',
+        letterSpacing: '-0.125rem',
+    },
+    {
+        name: 'headings / h1',
+        fontFamily: 'Outfit',
+        size: '3.5rem',
+        weight: '600',
+        lineHeight: '4.375rem',
+        letterSpacing: '-0.063rem',
+    },
+    {
+        name: 'headings / h2',
+        fontFamily: 'Outfit',
+        size: '2.813rem',
+        weight: '700',
+        lineHeight: '3.25rem',
+        letterSpacing: 'normal',
+    },
+    {
+        name: 'headings / h3',
+        fontFamily: 'Outfit',
+        size: '2.25rem',
+        weight: '700',
+        lineHeight: '2.75rem',
+        letterSpacing: 'normal',
+    },
+    {
+        name: 'headings / h4',
+        fontFamily: 'Outfit',
+        size: '2rem',
+        weight: '600',
+        lineHeight: '2.5rem',
+        letterSpacing: '-0.125rem',
+    },
+    {
+        name: 'headings / h5',
+        fontFamily: 'Outfit',
+        size: '1.5rem',
+        weight: '600',
+        lineHeight: '2rem',
+        letterSpacing: '-0.031rem',
+    },
+    {
+        name: 'headings / h6',
+        fontFamily: 'Outfit',
+        size: '1.125rem',
+        weight: '600',
+        lineHeight: '1.5rem',
+        letterSpacing: 'normal',
+    },
+    {
+        typographies: [
+            {
+                name: 'xl',
+                fontFamily: 'Inter',
+                size: '1.5rem',
+                weight: '400',
+                lineHeight: '1.875rem',
+                letterSpacing: '0rem',
+            }, 
+            {
+                name: 'xl-bold',
+                fontFamily: 'Inter',
+                size: '1.5rem',
+                weight: '600',
+                lineHeight: '1.875rem',
+                letterSpacing: '-0.031rem',
+            },            
+        ]
+    },
+    {
+        typographies: [
+            {
+                name: 'lg',
+                fontFamily: 'Inter',
+                size: '1.25rem',
+                weight: '400',
+                lineHeight: '1.75rem',
+                letterSpacing: 'normal',
+            }, 
+            {
+                name: 'lg-bold',
+                fontFamily: 'Inter',
+                size: '1.25rem',
+                weight: '600',
+                lineHeight: '1.75rem',
+                letterSpacing: '-0.031rem',
+            },
+        ]
+    },
+    {
+        typographies: [
+            {
+                name: 'base',
+                fontFamily: 'Inter',
+                size: '16px',
+                weight: '400',
+                lineHeight: '1.5rem',
+                letterSpacing: '0.031rem',
+            }, 
+            {
+                name: 'base-bold',
+                fontFamily: 'Inter',
+                size: '16px',
+                weight: '600',
+                lineHeight: '1.5rem',
+                letterSpacing: 'normal',
+            },
+        ]
+    },
+    {
+        typographies: [
+            {
+                name: 'sm',
+                fontFamily: 'Inter',
+                size: '0.875rem',
+                weight: '400',
+                lineHeight: '1.25rem',
+                letterSpacing: '0.013rem',
+            }, 
+            {
+                name: 'sm-bold',
+                fontFamily: 'Inter',
+                size: '0.875rem',
+                weight: '600',
+                lineHeight: '1.25rem',
+                letterSpacing: 'normal',
+            },
+        ]
+    },
+    {
+        typographies: [
+            {
+                name: 'xs',
+                fontFamily: 'Inter',
+                size: '0.75rem',
+                weight: '400',
+                lineHeight: 'normal',
+                letterSpacing: '0.031rem',
+            }, 
+            {
+                name: 'xs-bold',
+                fontFamily: 'Inter',
+                size: '0.75rem',
+                weight: '600',
+                lineHeight: 'normal',
+                letterSpacing: 'normal',
+            },
+        ]
+    }
+];
+
+
+<TypeSet typographies={typographies} />
+
+
+------
+
+### Usage
+
+```tsx
+import { TypeSet } from "@lucas-labs/plots/blocks";
+
+export const typographies = [
+    {
+        name: 'headings / display',
+        fontFamily: 'Outfit',
+        size: '5rem',
+        weight: '600',
+        lineHeight: '5.5rem',
+        letterSpacing: '-0.125rem',
+    },
+    {
+        typographies: [
+            {
+                name: 'xs',
+                fontFamily: 'Inter',
+                size: '0.75rem',
+                weight: '400',
+                lineHeight: 'normal',
+                letterSpacing: '0.031rem',
+            }, 
+            {
+                name: 'xs-bold',
+                fontFamily: 'Inter',
+                size: '0.75rem',
+                weight: '600',
+                lineHeight: 'normal',
+                letterSpacing: 'normal',
+            },
+        ]
+    }
+    ...
+]
+
+<TypeSet typographies={typographies} />
+
+```

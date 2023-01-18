@@ -44,3 +44,36 @@ export const palette = [
 
 
 <ColorPalette palettes={palette} />
+
+
+------
+
+### Usage
+
+```tsx
+import { ColorPalette } from "@lucas-labs/plots/blocks";
+
+export const palette = [
+    {
+        label: 'text',
+        color: '#320b4f'
+    },
+    {
+        label: 'background',
+        color: '#feefec'
+    },
+    {
+        name: 'base',
+        colors: [
+            { label: 'secondary', color: '#9985a7' },
+            { label: 'dark', color: '#0d0d0d' },
+            { label: 'light', color: '#ffffff' },
+            { label: 'disabled', color: '#5c5c5c' },
+        ]
+    },
+    ...
+];
+
+
+<ColorPalette palettes={palette} />
+```

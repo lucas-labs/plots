@@ -7,12 +7,14 @@
         "packages/*"
     ],
     "devDependencies": {
+        "concurrently": "^7.6.0",
         "prettier": "^2.0.5"
     },
     "scripts": {
         "build": "npm run build --workspaces --if-present",
         "tgz": "npm pack --workspace=@lucas-labs/plots",
-        "dev": "npm run dev --workspaces --if-present",
+        "serve": "concurrently \"npm run watch\" \"npm run example\" -n \"ts,sb\" -c \"blue.bold,magenta.bold\" -p \"[{name}]\"",
+        "watch": "npm run watch --workspaces --if-present",
         "example": "npm run storybook --workspace=@lucas-labs/plots-examples",
         "build:example": "npm run build-storybook --workspace=@lucas-labs/plots-examples",
         "fmt": "prettier --write README.md CHANGELOG.md CONTRIBUTING.md package.json \"packages/**/*.{js,jsx,ts,tsx,md,mdx,json}\""

@@ -3,7 +3,6 @@ import { css } from "@storybook/theming";
 export const $swatchCollection = css`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    
 `;
 
 export const $color = css`

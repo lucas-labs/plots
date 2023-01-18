@@ -9,8 +9,6 @@ interface Props { config: ColorPaletteConfig; }
 let id = 0;
 
 export const ColorPalette: FC<Props> = ({ config: opts }) => {
-    console.log(opts);
-
     return (
         <div > 
             {opts.palettes?.map((palette) => {

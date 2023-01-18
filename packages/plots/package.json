@@ -53,7 +53,7 @@
         }
     },
     "scripts": {
-        "dev": "tsc --watch --preserveWatchOutput",
+        "watch": "tsc --watch --preserveWatchOutput",
         "build": "npm run build:esm && npm run build:cjs",
         "build:esm": "tsc",
         "build:cjs": "tsc --module commonjs --outDir cjs",

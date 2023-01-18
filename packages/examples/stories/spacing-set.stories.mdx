@@ -1,0 +1,73 @@
+import { Meta, ArgsTable, Source } from "@storybook/addon-docs/blocks";
+import { SpacingSet } from "@lucas-labs/plots/blocks";
+
+<Meta title="Plots/SpacingSet" />
+
+export const measures = [
+    {
+        name: 'spacing',
+        measures: [
+            { label: '.25x', value: '4px' },
+            { label: '.5x',  value: '8px' },
+            { label: '.75x', value: '12px' },
+            { label: '1x',   value: '16px' },
+            { label: '1.5x', value: '24px' },
+            { label: '2x',   value: '32px' },
+            { label: '3x',   value: '48px' },
+            { label: '4x',   value: '64px' },
+            { label: '5x',   value: '80px' },
+            { label: '6x',   value: '96px' },
+            { label: '7x',   value: '112px' },
+            { label: '8x',   value: '128px' },
+            { label: '9x',   value: '144px' },
+            { label: '10x',  value: '160px' },
+            { label: '15x',  value: '240px' },
+            { label: '20x',  value: '320px' },
+        ]                  
+    },
+    {
+        name: 'radius',
+        type: 'radius',
+        measures: [
+            { label: '1', value: '4px' },
+            { label: '2', value: '8px' },
+            { label: '3', value: '16px' },
+            { label: '4', value: '28px' },
+            { label: '5', value: '32px' }
+        ] 
+    }
+];
+
+<SpacingSet measures={measures} />
+
+
+------
+
+### Usage
+
+```tsx
+import { SpacingSet } from "@lucas-labs/plots/blocks";
+
+export const measures = [
+    {
+        name: 'spacing',
+        measures: [
+            { label: '.25x', value: '4px' },
+            { label: '.5x',  value: '8px' },
+            ...
+        ]                  
+    },
+    {
+        name: 'radius',
+        type: 'radius',
+        measures: [
+            { label: '1', value: '4px' },
+            { label: '2', value: '8px' },
+            ...
+        ] 
+    }
+];
+
+<SpacingSet measures={measures} />
+
+```
