@@ -20,7 +20,7 @@
 ### ColorPalette
 
 ```tsx
-import { ColorPalette } from "@lucas-labs/plots/blocks";
+import { ColorPalette } from "@lucas-labs/plots";
 
 export const palette = [
     {
@@ -50,7 +50,7 @@ export const palette = [
 ### EffectsPalette
 
 ```tsx
-import { EffectsPalette } from "@lucas-labs/plots/blocks";
+import { EffectsPalette } from "@lucas-labs/plots";
 
 export const effects = [
     {
@@ -74,7 +74,7 @@ export const effects = [
 ### SpacingSet
 
 ```tsx
-import { SpacingSet } from "@lucas-labs/plots/blocks";
+import { SpacingSet } from "@lucas-labs/plots";
 
 export const measures = [
     {
@@ -102,7 +102,7 @@ export const measures = [
 ### TypeSet
 
 ```tsx
-import { TypeSet } from "@lucas-labs/plots/blocks";
+import { TypeSet } from "@lucas-labs/plots";
 
 export const typographies = [
     {
