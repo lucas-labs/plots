@@ -1,0 +1,46 @@
+import { Meta, ArgsTable, Source } from "@storybook/addon-docs/blocks";
+import { ColorPalette } from "@lucas-labs/plots/blocks";
+
+<Meta title="Plots/ColorPalette" />
+
+export const palette = [
+    {
+        label: 'text',
+        color: '#320b4f'
+    },
+    {
+        label: 'background',
+        color: '#feefec'
+    },
+    {
+        name: 'base',
+        colors: [
+            { label: 'secondary', color: '#9985a7' },
+            { label: 'dark', color: '#0d0d0d' },
+            { label: 'light', color: '#ffffff' },
+            { label: 'disabled', color: '#5c5c5c' },
+        ]
+    },
+    {
+        name: 'bg',
+        colors: [
+            { label: 'contrast', color: '#320b4f' },
+            { label: 'elevated', color: '#ffffff' },
+            { label: 'flat', color: '#f4e5e6' },
+            { label: 'unelevated', color: '#000000' },
+        ]
+    },
+    {
+        name: 'theme',
+        colors: [
+            { label: 'accent', color: '#ff3b5c' },
+            { label: 'secondary', color: '#834abc' },
+            { label: 'tertiary', color: '#3d2072' },
+            { label: 'danger', color: '#fe451d' },
+            { label: 'success', color: '#1dfe9f' },
+        ]
+    }
+];
+
+
+<ColorPalette palettes={palette} />

@@ -1,0 +1,27 @@
+name: "🔄 CI - Publish"
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+      - .editorconfig
+      - .gitignore
+  pull_request:
+    branches:    
+      - master
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  draft_release:
+    if: 
+      github.event_name == 'push' &&
+      (
+        startsWith(github.event.head_commit.message, 'release:') || 
+        startsWith(github.event.head_commit.message, 'release(')
+      )
+    uses: ./.github/workflows/release.yml
+    secrets: inherit

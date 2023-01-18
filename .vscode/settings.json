@@ -1,0 +1,61 @@
+{
+    "files.exclude": {
+        // 📙 sub-libs
+        "packages/assets": true,
+        "logo.ai": true,
+
+        // ⚙️ config
+        "**/**/tsconfig*": true,
+        ".npmrc": true,
+        "webpack.config.js": true,
+        "**/**/*code-workspace": true,
+        "vercel.json": true,
+        ".nvmrc": true,
+        "**/**/.babelrc.json": true,
+        "coco.yml": true,
+
+        // 🏷️ definitions & others
+        "**/**/*.d.ts": true,
+        "packages/plots/*.js": true,
+
+        // 📚 storybook
+        "**/**/.storybook": true,
+        // "**/**/stories": true,
+
+        // ♾️ ci
+        // ".github": true,
+
+        // 📦 package
+        // "packages/**/package.json": true,
+        // "package.json": true,
+
+        // 🧼 linters & styles
+        "**/**/.prettierrc": true,
+        "**/**/.editorconfig": true,
+        "**/**/*.eslintrc.*": true,
+
+        // 📝 readmes
+        "**/**/README.md": true,
+
+        // 🗑️
+        "**/**/node_modules": true,
+        "pnpm-lock.yaml": true,
+        "yarn.lock": true,
+        "package-lock.json": true,
+        ".prettierignore": true,
+        "**/**/.gitignore": true,
+        ".git": true,
+        "dist": true,
+        "coverage": true,
+        ".vscode": true,
+        "**/**/.npmignore": true,
+        "packages/plots/esm": true,
+        "packages/plots/cjs": true,
+
+        // 🧪 tests 
+        "**/**/test": true,
+        "**/**/tests": true,
+        "**/**/*.specs.ts": true,
+        "**/**/*.specs.js": true,
+    }
+}

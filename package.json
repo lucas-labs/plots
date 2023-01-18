@@ -1,0 +1,21 @@
+{
+    "name": "root",
+    "version": "0.0.0-alpha.0",
+    "repository": "git@github.com:lucas-labs/plots.git",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "prettier": "^2.0.5"
+    },
+    "scripts": {
+        "build": "npm run build --workspaces --if-present",
+        "tgz": "npm pack --workspace=@lucas-labs/plots",
+        "dev": "npm run dev --workspaces --if-present",
+        "example": "npm run storybook --workspace=@lucas-labs/plots-examples",
+        "build:example": "npm run build-storybook --workspace=@lucas-labs/plots-examples",
+        "fmt": "prettier --write README.md CHANGELOG.md CONTRIBUTING.md package.json \"packages/**/*.{js,jsx,ts,tsx,md,mdx,json}\""
+    },
+    "prettier": {}
+}
