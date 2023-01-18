@@ -58,7 +58,7 @@ jobs:
       - name: 🔖 Create Release
         uses: ncipollo/release-action@v1.11.1
         env:
-          GITHUB_TOKEN: ${{ secrets.github_token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           prerelease: false
           draft: true
