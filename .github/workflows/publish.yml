@@ -22,11 +22,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v3
+      - name: 🟢 Setup Node.js & pnpm
+        uses: ./.github/workflows/composites/setup-node
         with:
-          node-version-file: .nvmrc
-          cache: npm
+          node-version: 16.14.0
+          pnpm-version: 7.14.2
 
       - name: 📦 Install Dependencies
         run: npm ci
@@ -49,21 +49,16 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: 📁 Checkout Repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
       - name: ⬇️ Download Artifact
         uses: actions/download-artifact@v3.0.1
         with:
           name: plots-package
 
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v3
+      - name: 🟢 Setup Node.js & pnpm
+        uses: ./.github/workflows/composites/setup-node
         with:
-          node-version-file: .nvmrc
-          cache: npm
+          node-version: 16.14.0
+          pnpm-version: 7.14.2
 
       - name: 📑 Make .npmrc
         run: echo "registry=https://npm.pkg.github.com/@lucas-labs" >> .npmrc
