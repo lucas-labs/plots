@@ -22,11 +22,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🟢 Setup Node.js & pnpm
-        uses: ./.github/workflows/composites/setup-node
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v3.5.1
         with:
           node-version: 16.14.0
-          pnpm-version: 7.14.2
+          cache: 'npm'
 
       - name: 📦 Install Dependencies
         run: npm ci
@@ -54,11 +54,11 @@ jobs:
         with:
           name: plots-package
 
-      - name: 🟢 Setup Node.js & pnpm
-        uses: ./.github/workflows/composites/setup-node
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v3.5.1
         with:
           node-version: 16.14.0
-          pnpm-version: 7.14.2
+          cache: 'npm'
 
       - name: 📑 Make .npmrc
         run: echo "registry=https://npm.pkg.github.com/@lucas-labs" >> .npmrc
