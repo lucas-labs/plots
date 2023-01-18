@@ -1,6 +1,6 @@
 {
     "name": "@lucas-labs/plots-examples",
-    "version": "0.0.0-alpha.0",
+    "version": "0.0.1-alpha.1",
     "private": true,
     "dependencies": {
         "react": "^17.0.0",
@@ -22,7 +22,7 @@
         "@storybook/theming": "6.5.15",
         "@storybook/builder-webpack5": "^6.5.15",
         "@storybook/manager-webpack5": "^6.5.15",
-        "webpack": "^5.64.0"        
+        "webpack": "^5.64.0"
     },
     "scripts": {
         "storybook": "start-storybook -p 6006 -s ../assets",

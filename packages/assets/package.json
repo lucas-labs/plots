@@ -1,6 +1,9 @@
 {
     "name": "@lucas-labs/plots-assets",
-    "version": "7.0.0-beta.2",
+    "version": "0.0.1-alpha.1",
     "private": true,
-    "include": ["src", "global.d.ts"]
+    "include": [
+        "src",
+        "global.d.ts"
+    ]
 }
