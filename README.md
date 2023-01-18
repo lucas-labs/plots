@@ -12,11 +12,10 @@
 
 # 📚 Doc Blocks
 
-- [📚 Doc Blocks](#-doc-blocks)
-    - [ColorPalette](#colorpalette)
-    - [EffectsPalette](#effectspalette)
-    - [SpacingSet](#spacingset)
-    - [TypeSet](#typeset)
+- [`ColorPalette`](#colorpalette)
+- [`EffectsPalette`](#effectspalette)
+- [`SpacingSet`](#spacingset)
+- [`TypeSet`](#typeset)
 
 ### ColorPalette
 
