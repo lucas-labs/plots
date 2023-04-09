@@ -10,6 +10,8 @@
 
 <br/>
 
+A small collection of personal storybook documentation blocks I use in my projects to document design tokens, colors, typography, etc in a more visual way 🧉
+
 # 📚 Doc Blocks
 
 - [`ColorPalette`](#colorpalette)
