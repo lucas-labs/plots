@@ -19,6 +19,10 @@
 
 ### ColorPalette
 
+<p align="center"><img src="./packages/assets/doc-snaps/color-palette.png"></p>
+
+#### `usage /`
+
 ```tsx
 import { ColorPalette } from "@lucas-labs/plots";
 
@@ -43,11 +47,14 @@ export const palette = [
     ...
 ];
 
-
 <ColorPalette palettes={palette} />
 ```
 
 ### EffectsPalette
+
+<p align="center"><img src="./packages/assets/doc-snaps/effects-palette.png"></p>
+
+#### `usage /`
 
 ```tsx
 import { EffectsPalette } from "@lucas-labs/plots";
@@ -72,6 +79,10 @@ export const effects = [
 ```
 
 ### SpacingSet
+
+<p align="center"><img src="./packages/assets/doc-snaps/spacing-set.png"></p>
+
+#### `usage /`
 
 ```tsx
 import { SpacingSet } from "@lucas-labs/plots";
@@ -100,6 +111,10 @@ export const measures = [
 ```
 
 ### TypeSet
+
+<p align="center"><img src="./packages/assets/doc-snaps/type-set.png"></p>
+
+#### `usage /`
 
 ```tsx
 import { TypeSet } from "@lucas-labs/plots";

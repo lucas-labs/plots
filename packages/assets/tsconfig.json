@@ -1,0 +1,4 @@
+{
+    "include": ["./**/*.ts", "global.d.ts"],
+    "exclude": ["node_modules", "esm", "cjs"]
+}
