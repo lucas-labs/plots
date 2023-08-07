@@ -59,15 +59,27 @@ jobs:
         with:
           name: plots-package
 
-      - name: 🟢 Setup Node.js
+      - name: 🟢 Setup Node.js for npmjs
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
           cache: npm
+          registry-url: 'https://registry.npmjs.org'
 
-      - name: 🚀 Publish
+      - name: 🚀 Publish to NPM
+        run: npm publish $(ls *.tgz)
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: 🟢 Setup Node.js for Github
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: 🚀 Publish to Github
         run: npm publish $(ls *.tgz)
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
 
