@@ -32,6 +32,9 @@ jobs:
       - name: 📦 Install Dependencies
         run: mkdir node_modules && npm ci
 
+      - name: 📖 Readme 
+        run: npm run copy-readme
+
       - name: 🏗️ Build 
         run: npm run build
 

@@ -1,6 +1,6 @@
 {
     "name": "root",
-    "version": "1.1.0",
+    "version": "0.0.0",
     "repository": "git@github.com:lucas-labs/plots.git",
     "private": false,
     "workspaces": [
@@ -12,6 +12,7 @@
     },
     "scripts": {
         "build": "npm run build --workspaces --if-present",
+        "copy-readme": "cp README.md packages/plots/README.md",
         "tgz": "npm pack --workspace=@lucas-labs/plots",
         "serve": "concurrently \"npm run watch\" \"npm run example\" -n \"ts,sb\" -c \"blue.bold,magenta.bold\" -p \"[{name}]\"",
         "watch": "npm run watch --workspaces --if-present",
