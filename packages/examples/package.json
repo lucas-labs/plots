@@ -2,30 +2,32 @@
     "name": "@lucas-labs/plots-examples",
     "version": "1.0.0",
     "private": true,
+    "type": "module",
+    "scripts": {
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build"
+    },
     "dependencies": {
-        "react": "^17.0.0",
-        "react-dom": "^17.0.0"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
-        "@babel/core": "^7.18.5",
-        "@babel/preset-env": "^7.18.2",
-        "@babel/preset-react": "^7.17.12",
-        "@babel/preset-typescript": "^7.17.12",
-        "@lucas-labs/plots-assets": "*",
-        "@lucas-labs/plots": "*",
-        "@storybook/addon-actions": "6.5.15",
-        "@storybook/addon-docs": "6.5.15",
-        "@storybook/addon-links": "6.5.15",
-        "@storybook/addon-storysource": "6.5.15",
-        "@storybook/addons": "6.5.15",
-        "@storybook/react": "6.5.15",
-        "@storybook/theming": "6.5.15",
-        "@storybook/builder-webpack5": "^6.5.15",
-        "@storybook/manager-webpack5": "^6.5.15",
-        "webpack": "^5.64.0"
-    },
-    "scripts": {
-        "storybook": "start-storybook -p 6006 -s ../assets",
-        "build-storybook": "build-storybook -s ../assets"
+        "@storybook/addon-essentials": "^7.2.1",
+        "@storybook/addon-interactions": "^7.2.1",
+        "@storybook/addon-links": "^7.2.1",
+        "@storybook/addon-onboarding": "^1.0.8",
+        "@storybook/blocks": "^7.2.1",
+        "@storybook/manager-api": "^7.2.1",
+        "@storybook/react": "^7.2.1",
+        "@storybook/react-vite": "^7.2.1",
+        "@storybook/testing-library": "^0.2.0",
+        "@storybook/theming": "^7.2.1",
+        "@types/react": "^18.2.15",
+        "@types/react-dom": "^18.2.7",
+        "@vitejs/plugin-react-swc": "^3.3.2",
+        "eslint": "^8.45.0",
+        "storybook": "^7.2.1",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.5"
     }
 }

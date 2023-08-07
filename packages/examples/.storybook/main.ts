@@ -1,34 +1,16 @@
-// module.exports = {
-//     stories: [
-//         "../stories/**/*.stories.mdx",
-//         "../stories/**/*.stories.{js,jsx,ts,tsx}",
-//     ],
+import type { StorybookConfig } from "@storybook/react-vite";
 
-//     features: {
-//         babelModeV7: true,
-//     },
-//     core: {
-//         disableTelemetry: true,
-//     },
-// };
-
-import type { StorybookConfig } from '@storybook/core-common';
-
-const config: StorybookConfig = {
-    core: { builder: 'webpack5' },
-    stories: [
-        '../stories/**/*.stories.mdx',
-        '../stories/**/*.stories.{js,jsx,ts,tsx}',
-    ],
-    addons: [
-        // "@lucas-labs/plots",
-        "@storybook/addon-docs",
-        "@storybook/addon-storysource",
-    ],
-    webpackFinal: async (config) => {
-        return config;
+const config = {
+    stories: ["../**/*.stories.@(js|jsx|ts|tsx|mdx)"],
+    staticDirs: ["../../assets"],
+    addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+    framework: {
+        name: "@storybook/react-vite",
+        options: {},
     },
-};
+    docs: {
+        autodocs: "tag",
+    },
+} satisfies StorybookConfig;
 
-module.exports = config;
-
+export default config;

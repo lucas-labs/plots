@@ -30,7 +30,6 @@ export const effectsCollection = css`
         min-width: 4rem;
         min-height: 4rem;
         border-radius: 100%;
-        /* border: 4px solid #f7f5f8; */
     }
 
     .palette h4 {

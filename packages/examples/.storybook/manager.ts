@@ -1,9 +1,9 @@
-import { addons } from "@storybook/addons";
-import { create } from "@storybook/theming";
-
+import { addons } from '@storybook/manager-api';
 import theme from './theme';
 
 addons.setConfig({
-    theme,
-    showRoots: true,
+    theme: theme,
+    showNav: true,
+    showPanel: true,
+    panelPosition: 'right',
 });

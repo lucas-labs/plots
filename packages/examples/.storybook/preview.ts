@@ -1,6 +1,11 @@
-import { addParameters } from "@storybook/react";
+import { Preview } from '@storybook/react';
 
-addParameters({
-    viewMode: "story",
-    docs: { page: null },
-});
+export default {
+    parameters: {
+        layout: 'centered',
+        docs: {
+            inlineStories: true
+        },
+    }
+} satisfies Preview;
+

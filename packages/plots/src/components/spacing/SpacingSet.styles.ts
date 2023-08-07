@@ -47,13 +47,13 @@ export const $spacing = css`
     }
 
     .spacing .sample {
-        background-color: var(--c-text, #000);
+        background-color: var(--spacing-main-color, #000);
         border-radius: 4px;
     }
 
     .radius .sample div {
-        border-top: 3px solid var(--c-text, #000);
-        border-left: 3px solid var(--c-text, #000);
+        border-top: 3px solid var(--spacing-main-color, #000);
+        border-left: 3px solid var(--spacing-main-color, #000);
         width: 6em;
         height: 6em;
     }
