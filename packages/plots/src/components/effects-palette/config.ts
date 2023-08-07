@@ -1,9 +1,11 @@
 import { CSSObject } from "@storybook/theming";
+import { HTMLAttributes } from "react";
 
 export type Effect = {
     label: string,
     description?: string,
-    style: CSSObject
+    style?: CSSObject
+    className?: string
 }
 
 export type EffectGroup = { 
@@ -11,7 +13,14 @@ export type EffectGroup = {
     effects: Effect[]
 };
 
-export interface EffectsPaletteConfig {
+export type EffectsPaletteClasses = {
+    groupTitle?: string;
+    effectName?: string;
+    effectDescription?: string;
+}
+
+export interface EffectsPaletteConfig extends HTMLAttributes<HTMLDivElement> {
     type: "effects-palette";
     effects: (EffectGroup | Effect)[];
+    classNames?: EffectsPaletteClasses;
 }

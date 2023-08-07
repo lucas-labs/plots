@@ -1,3 +1,5 @@
+import { HTMLAttributes } from "react";
+
 export type TypographyGroup = {
     group: string;
     typographies: Typography[];
@@ -16,7 +18,13 @@ export type Typography = {
     textDecoration?: string;
 };
 
-export interface TypeSetConfig {
+export type TypeSetClasses = {
+    typeSetName?: string;
+    typeSetDescription?: string;
+}
+
+export interface TypeSetConfig extends HTMLAttributes<HTMLDivElement> {
     type: "type-set";
     typographies: (TypographyGroup | Typography)[];
+    classNames?: TypeSetClasses;
 }

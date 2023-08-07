@@ -1,45 +1,46 @@
 /** @jsx jsx */
 import { FC } from "react";
 import { css, jsx } from "@storybook/theming";
-import { EffectGroup as Palette, EffectsPaletteConfig, Effect } from "./config";
+import { EffectGroup as Palette, EffectsPaletteConfig, Effect, EffectsPaletteClasses } from "./config";
 import * as style from "./EffectsPalette.styles";
+import cn from "../../utils/cn";
 
 interface Props { config: EffectsPaletteConfig; }
 
 let id = 0;
 
-export const EffectsPalette: FC<Props> = ({ config: opts }) => {
+export const EffectsPalette: FC<Props> = ({ config: {effects, type, classNames, ...rest} }) => {
     return (
-        <div css={style.effectsCollection}> 
-            {opts.effects?.map((palette) => {
-                return isPalette(palette) ? makePalette(palette) : makeEffect(palette);
+        <div css={style.effectsCollection} {...rest}> 
+            {effects?.map((palette) => {
+                return isPalette(palette) ? makePalette(palette, classNames) : makeEffect(palette, classNames);
             })}
         </div>
     ); 
 };
 
-export const makePalette = (palette: Palette): jsx.JSX.Element => {
+export const makePalette = (palette: Palette, classNames?: EffectsPaletteClasses): jsx.JSX.Element => {
     id++;
     return (
         <div key={id} className="palette">
-            <h4>{palette.name} /</h4>
+            <h4 className={classNames?.groupTitle}>{palette.name} /</h4>
             <div className="effect-collection">
                 {palette.effects.map((effect) => {
-                    return makeEffect(effect);
+                    return makeEffect(effect, classNames);
                 })}
             </div>
         </div>
     );
 };
 
-export const makeEffect = (effect: Effect): jsx.JSX.Element => {
+export const makeEffect = (effect: Effect, classNames?: EffectsPaletteClasses): jsx.JSX.Element => {
     id++;
     return (
         <div key={id} className="effect">
-            <div className="sample" css={css(effect.style)}></div>
+            <div className={cn('sample', effect.className)} css={css(effect.style)}></div>
             <div className="label">
-                <h6>{effect.label}</h6>
-                <div>{effect.description}</div>
+                <h6 className={classNames?.effectName}>{effect.label}</h6>
+                <div className={classNames?.effectName}>{effect.description}</div>
             </div>
         </div>
     );
